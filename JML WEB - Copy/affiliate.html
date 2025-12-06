@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Become a Promoter — JML Photography</title>
+  <meta name="description" content="Join the JML Photography Promoter Team — apply to promote weddings, get your promoter code and earn commission.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Reuse main theme styles for consistent site look -->
+  
+  <link rel="stylesheet" href="/JML WEB/css/affiliate.css">
+
+  <!-- If you want a separate affiliate CSS later, we can add it; for now styles.css contains shared styles -->
+</head>
+<body class="theme-dark">
+
+  <!-- Header (reuse same header structure from index.html for consistency) -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html#home"><img src="assets/logo.png" alt="JML Photography logo, clickable link to homepage"></a>
+
+      <nav class="nav" id="siteNavAffiliate">
+        <a href="index.html#home">Home</a>
+
+      </nav>
+
+      <button id="menuToggleAffiliate" class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="affiliate-hero" class="section hero affiliate-hero" style="background-image:url('assets/wedding-01.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <h1 class="title">Become a Promoter for JML Photography</h1>
+      <p class="subtitle">Earn commissions by bringing clients. Simple & transparent.</p>
+      <div class="hero-ctas">
+        <a href="#apply" class="btn btn-primary">Start Application</a>
+        <a href="mailto:jmlphotography24@gmail.com" class="btn btn-ghost gold-border">Contact</a>
+      </div>
+      <div class="hero-note" aria-hidden="true">
+        <small class="muted">Approved promoters receive a code & welcome pack. Payments processed weekly.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS STRIP -->
+  <section class="section bubble" aria-labelledby="benefitsTitle">
+    <div class="wrap">
+      <h2 id="benefitsTitle" class="section-title">Why join the JML promoter team?</h2>
+      <div class="benefits-grid reveal">
+        <div class="benefit-card panel">
+          <h4>Earn commission</h4>
+          <p class="muted">Receive commission on confirmed bookings with deposit.</p>
+        </div>
+        <div class="benefit-card panel">
+          <h4>Monthly payouts</h4>
+          <p class="muted">Payments are processed monthly between the 1st–3rd.</p>
+        </div>
+        <div class="benefit-card panel">
+          <h4>Materials & support</h4>
+          <p class="muted">We provide promo materials and guidance to help you succeed.</p>
+        </div>
+        <div class="benefit-card panel">
+          <h4>Simple tracking</h4>
+          <p class="muted">Every lead is tracked using your unique promoter code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- FAQ -->
+  <section class="section bubble" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <h2 id="faqTitle" class="section-title">FAQ</h2>
+      <div class="faq-grid reveal" class="faq">
+        <details class="faq1"><summary>How does the promoter code work?</summary><p>We assign you a unique code once your application is approved. Clients add that code when booking so we can track your commission.</p></details>
+        <details class="faq2"><summary>When do I get paid?</summary><p>Payments are processed monthly between the 1st–3rd for confirmed bookings that have paid a deposit.</p></details>
+        <details class="faq3"><summary>What counts as a confirmed lead?</summary><p>A lead becomes confirmed when the client pays a deposit and the booking is recorded.</p></details>
+        <details class="faq4"><summary>Do I need prior experience?</summary><p>No — anyone can join. We provide guidance and assets to help you promote effectively.</p></details>
+        <details class="faq5"><summary>How active should I be?</summary><p>Activity levels vary — we reward consistent, genuine promotion. More active promoters often earn more.</p></details>
+        <details class="faq6"><summary>How do I track my commissions?</summary><p>We will keep records and contact you monthly with payouts. For the initial stage, approved promoters receive a welcome email with tracking details.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM (full-page glass card) -->
+  <section id="apply" class="section" aria-labelledby="applyTitle">
+    <div class="wrap">
+      <h2 id="applyTitle" class="section-title">Promoter Application</h2>
+
+      <div class="apply-grid">
+        <!-- left: information / photos -->
+        <div class="apply-left panel reveal">
+          <h3>About the application</h3>
+          <p class="muted">Fill this form honestly. If approved, you’ll receive your unique promoter code and a welcome pack.</p>
+          <div class="apply-photos">
+            <img src="assets/affiliate/sample-01.jpg" alt="sample" class="lozad">
+            <img src="assets/affiliate/sample-02.jpg" alt="sample" class="lozad">
+            <img src="assets/affiliate/sample-03.jpg" alt="sample" class="lozad">
+          </div>
+        </div>
+
+        <!-- right: form card -->
+        <div class="apply-right panel reveal">
+          <form id="promoterForm" 
+      name="jml-affiliate-form" 
+      method="POST" 
+      data-netlify="true" 
+      netlify-honeypot="bot-field" 
+      class="affiliate-form panel" 
+      novalidate>
+
+  <!-- Required for Netlify -->
+  <input type="hidden" name="form-name" value="jml-affiliate-form">
+
+  <!-- bot-field -->
+  <div style="display:none">
+    <label>Don’t fill this out if you're human:
+      <input name="bot-field">
+    </label>
+  </div>
+
+  <label>Full Name <span class="required">*</span>
+    <input name="fullName" type="text" required placeholder="Your full name">
+  </label>
+
+  <label>Phone (WhatsApp) <span class="required">*</span>
+    <input name="phone" type="tel" required placeholder="+27 82 123 4567">
+  </label>
+
+  <label>Email <span class="required">*</span>
+    <input name="email" type="email" required placeholder="you@example.com">
+  </label>
+
+  <label>City / Area <span class="required">*</span>
+    <input name="city" type="text" required placeholder="Johannesburg">
+  </label>
+
+  <label>How did you hear about this opportunity?
+    <select name="heardFrom" required>
+      <option value="">Choose</option>
+      <option>Facebook</option>
+      <option>Instagram</option>
+      <option>WhatsApp</option>
+      <option>Friend / Promoter</option>
+      <option>Other</option>
+    </select>
+  </label>
+
+  <fieldset>
+    <legend>Have you promoted anything before?</legend>
+    <label><input type="radio" name="promotedBefore" value="Yes" required> Yes</label>
+    <label><input type="radio" name="promotedBefore" value="No"> No</label>
+  </fieldset>
+
+  <label id="experienceLabel" class="conditional hidden">
+    Describe your experience
+    <textarea name="experience" rows="3" placeholder="If yes, tell us briefly"></textarea>
+  </label>
+
+  <label>Why do you want to join the JML promoter team? <span class="required">*</span>
+    <textarea name="whyJoin" rows="4" required placeholder="Tell us why you'd like to join"></textarea>
+  </label>
+
+  <label>Are you comfortable talking to new people and collecting details?
+    <select name="comfortableTalking" required>
+      <option value="">Choose</option>
+      <option>Yes, definitely</option>
+      <option>Yes, but I need guidance</option>
+      <option>Not sure</option>
+      <option>No</option>
+    </select>
+  </label>
+
+  <label>How active can you be?
+    <select name="activityLevel" required>
+      <option value="">Choose</option>
+      <option>Very active (daily)</option>
+      <option>Active (a few times per week)</option>
+      <option>Occasionally (once a week)</option>
+      <option>Only when someone asks me</option>
+    </select>
+  </label>
+
+  <label>Social links (optional)
+    <input name="socialLinks" type="text" placeholder="Instagram / Facebook URLs">
+  </label>
+
+  <!-- ACTION BUTTONS -->
+  <div class="form-actions">
+    <button id="promoterSubmit" type="button" class="btn btn-primary">
+      Submit Application
+    </button>
+    <button id="promoterClear" type="button" class="btn btn-ghost">
+      Clear
+    </button>
+  </div>
+
+  <!-- Success message -->
+  <div id="promoterSuccess" class="promoter-success hidden" role="status" aria-live="polite">
+    <strong>Thanks — your application was received!</strong>
+    <p>We’ll review everything and send your promoter code if you’re approved.</p>
+  </div>
+
+</form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules POPUP (enforced on submit) -->
+  <div id="rulesPopup" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <button id="closeRules" class="modal-close" aria-label="Close">✕</button>
+      <h3>📌 JML Photography – Promoter Rules & Expectations</h3>
+      <div class="rules-content">
+        <ul>
+          <li><strong>Always use your promoter code</strong> — Every client you speak to must have your code so your commission is tracked.</li>
+          <li><strong>Every lead must be submitted through the form</strong> — No form = no commission.</li>
+          <li><strong>Be respectful & professional</strong> — No spamming, no rude messages, no forcing clients.</li>
+          <li><strong>Honesty is essential</strong> — Don’t claim bookings you didn’t bring in. Don’t edit client quotes or make promises I didn’t approve.</li>
+          <li><strong>No creating your own prices</strong> — Only use the official packages from JML Photography.</li>
+          <li><strong>You may not pose as the photographer</strong> — Introduce yourself as a promoter.</li>
+          <li><strong>Commission is paid on confirmed bookings only</strong> — A client must pay a deposit before commission is earned.</li>
+          <li><strong>Payment is made monthly</strong> — Payments processed between the 1st–3rd of every month.</li>
+          <li><strong>Be active and helpful</strong> — Answer questions quickly but professionally.</li>
+          <li><strong>Respect client privacy</strong> — Never send client information to other people.</li>
+        </ul>
+      </div>
+
+      <div class="modal-actions">
+        <label class="checkbox-label"><input id="acceptRulesCheckbox" type="checkbox"> I have read and accept the rules</label>
+        <div style="flex:1"></div>
+        <button id="acceptRulesBtn" class="btn btn-primary" disabled>I Accept & Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="yearAffiliate"></span> JML Photography.</p>
+      <p class="muted">Promoter program terms are subject to change — always read the rules before accepting.</p>
+    </div>
+  </footer>
+
+  <!-- Page-specific script will handle: accordion, rules popup flow, Netlify submit, animations -->
+  <script src="/JML WEB/js/affiliate.js"></script>
+</body>
+</html>

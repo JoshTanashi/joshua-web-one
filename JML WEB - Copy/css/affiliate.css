@@ -1,0 +1,472 @@
+/* ----------------------------------------------------
+   GLOBALS — affiliate page styling
+---------------------------------------------------- */
+
+body.theme-dark {
+  background: #0f0e0d;
+  color: #e8e3dc;
+}
+
+.muted { color: #a79f96; }
+
+:root {
+  --gold: #d4b57a;
+  --gold-soft: rgba(212,181,122,0.4);
+  --panel-bg: rgba(25,23,22,0.6);
+  --panel-border: rgba(212,181,122,0.15);
+  --transition-fast: 0.25s ease;
+  --transition-slow: 0.55s cubic-bezier(0.25, 0.1, 0.15, 1);
+}
+
+/* ---------------------------------------------
+   HEADER & NAV
+--------------------------------------------- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header-inner {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  padding-right: 50px;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* Mobile nav toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 26px;
+}
+
+
+/* ----------------------------------------------------
+   HERO
+---------------------------------------------------- */
+
+.affiliate-hero {
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.affiliate-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.85));
+}
+
+.affiliate-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+}
+
+.affiliate-hero .title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+}
+
+.affiliate-hero .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #d0c8bd;
+}
+
+.hero-note {
+    font-size: 1.2rem;
+     margin-top: 2rem;
+     color: #d0c8bd;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: #1b1a18;
+  padding: 0.8rem 1.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: #e9c98d;
+}
+
+.btn-ghost {
+  padding: 0.8rem 1.6rem;
+  border: 1px solid #6f675e;
+  border-radius: 6px;
+  color: #d4cfc6;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.gold-border {
+  border-color: var(--gold) !important;
+}
+
+/* ----------------------------------------------------
+   PANELS / BUBBLES
+---------------------------------------------------- */
+
+.panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--panel-border);
+  padding: 1.7rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  transition: var(--transition-slow);
+}
+
+.panel:hover {
+  border-color: var(--gold-soft);
+  transform: translateY(-3px);
+}
+
+/* ----------------------------------------------------
+   BENEFITS GRID
+---------------------------------------------------- */
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 1.5rem;
+}
+
+/* ----------------------------------------------------
+   RULES ACCORDION
+---------------------------------------------------- */
+
+.rules-accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 1.2rem;
+}
+
+.rules-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rules-card summary {
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+}
+
+.rules-card summary::after {
+  content: "▾";
+  position: absolute;
+  right: 1.2rem;
+  transition: var(--transition-fast);
+}
+
+.rules-card[open] summary::after {
+  transform: rotate(-180deg);
+}
+
+.rules-body {
+  padding: 1rem 1.2rem;
+  color: #cfc8c0;
+  border-top: 1px solid var(--panel-border);
+}
+
+/* ----------------------------------------------------
+   FAQ
+---------------------------------------------------- */
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 1.2rem;
+}
+
+.faq {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+}
+
+.faq summary::after {
+  content: "+";
+  float: right;
+  transition: var(--transition-fast);
+}
+
+.faq1[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq2[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq3[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq4[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq5[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq6[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* ----------------------------------------------------
+   APPLICATION FORM
+---------------------------------------------------- */
+
+.apply-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+}
+
+.apply-left h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+}
+
+.apply-photos {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.apply-photos img {
+  width: 33%;
+  border-radius: 8px;
+  opacity: 0.85;
+  transition: var(--transition-fast);
+}
+
+.apply-photos img:hover {
+  opacity: 1;
+}
+
+.apply-right form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.apply-right input,
+.apply-right select,
+.apply-right textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  background: #1c1a19;
+  border: 1px solid #4a433e;
+  border-radius: 6px;
+  color: #e7e2da;
+  transition: var(--transition-fast);
+}
+
+.apply-right input:focus,
+.apply-right select:focus,
+.apply-right textarea:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.required {
+  color: var(--gold);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+/* Buttons inside form */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+
+/* Success box */
+.promoter-success {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  background: rgba(25,25,25,0.5);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ----------------------------------------------------
+   RULES POPUP (Modal)
+---------------------------------------------------- */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-slow);
+  z-index: 999;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-panel {
+  background: #1b1a18;
+  width: min(680px, 90%);
+  margin: 6vh auto;
+  padding: 2rem;
+  border-radius: 14px;
+  border: 1px solid var(--gold-soft);
+  box-shadow: 0 0 35px rgba(0,0,0,0.5);
+  position: relative;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: var(--transition-slow);
+}
+
+.modal.open .modal-panel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  color: #d4cfc6;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.modal-actions .btn-primary[disabled] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------
+   REVEAL ANIMATIONS
+---------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: 0.8s cubic-bezier(0.33, 0.1, 0.14, 1);
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .apply-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .affiliate-hero .title {
+    font-size: 2.3rem;
+  }
+  .benefits-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------
+   FOOTER
+--------------------------------------------- */
+
+.site-footer {
+  padding: 40px 0;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-footer p {
+  color: var(--text-muted);
+}
